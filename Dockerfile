@@ -14,7 +14,5 @@ RUN R -e "options(warn=2); install.packages('xml2')"
 RUN R -e "options(warn=2); install.packages('rvest')"
 RUN R -e "options(warn=2); install.packages('httr')"
 RUN R -e "options(warn=2); install.packages('fitzRoy')"
-
-# install.packages("fitzRoy") - but in Docker-eze
 # Install python packages
 RUN pip install -r /tmp/requirements.txt
