@@ -7,8 +7,8 @@ RUN apt-get update && apt-get install -y libpq-dev git gcc
 # Install packages for R
 RUN apt-get update && apt-get install -y r-base r-base-dev
 # install packages for fitzroy dependencies
-RUN sudo apt-get install -y libcurl4-openssl-dev libssl-dev
-RUN sudo apt-get install -y libxml2-dev
+RUN apt-get install -y libcurl4-openssl-dev libssl-dev
+RUN apt-get install -y libxml2-dev
 # Install R packages
 RUN R -e "options(warn=2); install.packages('xml2')"
 RUN R -e "options(warn=2); install.packages('rvest')"
